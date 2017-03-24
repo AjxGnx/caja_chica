@@ -1,0 +1,33 @@
+<odoo>
+  <data>
+
+    <!-- actions opening views on models -->
+    <record model="ir.actions.act_window" id="caja_chica.action_window_salida">
+      <field name="name">Salida de la Caja Chica</field>
+      <field name="res_model">caja_chica.salida</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <record model="ir.actions.act_window" id="caja_chica.action_window_entrada">
+      <field name="name">Entrada de la Caja Chica</field>
+      <field name="res_model">caja_chica.entrada</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+    
+    <!-- Top menu item -->  
+    <menuitem name="Caja Chica" id="caja_chica.menu_root"/>
+    
+    <!-- menu categories -->  
+    <menuitem name="Caja Chica" id="caja_chica.menu_1" parent="caja_chica.menu_root"/>
+
+    <!-- actions --> 
+    <menuitem name="Salida" id="caja_chica.action_salida" parent="caja_chica.menu_1"
+              action="caja_chica.action_window_salida"/>
+
+    <menuitem name="Entrada" id="caja_chica.action_entrada" parent="caja_chica.menu_1"
+              action="caja_chica.action_window_entrada"/>      
+
+
+    
+  </data>
+</odoo>
