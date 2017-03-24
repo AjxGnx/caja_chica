@@ -1,0 +1,34 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+    <record model="ir.ui.view" id="caja_chica.tree_entrada">
+      <field name="name">caja_chica entrada</field>
+      <field name="model">caja_chica.entrada</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="usuario" placeholder="Usuario"/>
+          <field name="monto" placeholder="Monto"/>
+          <field name="descripcion" placeholder="Descripcion"/>
+          <field name="fecha" placeholder="Fecha de salida"/>
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="caja_chica.form_entrada">
+      <field name="name">caja_chica entrada</field>
+      <field name="model">caja_chica.entrada</field>
+      <field name="arch" type="xml">
+        <form>
+          <group>
+            <field name="usuario" placeholder="Usuario"/>
+            <field name="monto" placeholder="Monto"/>
+            <field name="descripcion" placeholder="Descripcion"/>
+            <field name="fecha" placeholder="Fecha de salida"/>
+          </group>
+        </form>
+      </field>
+    </record>
+    
+    
+  </data>
+</odoo>
