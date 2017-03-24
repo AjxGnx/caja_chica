@@ -2,14 +2,25 @@
 
 from odoo import models, fields, api
 
-# class caja_chica(models.Model):
-#     _name = 'caja_chica.caja_chica'
+class salida(models.Model):
+	# nombre del modele - nombre de la clase
+    _name = 'caja_chica.salida'
 
-#     name = fields.Char()
-#     value = fields.Integer()
-#     value2 = fields.Float(compute="_value_pc", store=True)
-#     description = fields.Text()
-#
-#     @api.depends('value')
-#     def _value_pc(self):
-#         self.value2 = float(self.value) / 100
+    usuario = fields.Char()
+    monto = fields.Integer()
+    descripcion = fields.Char()
+    fecha = fields.Datetime()
+    # fecha_registro = fields.Date(auto_now_add=True, auto_now=False)
+
+class entrada(models.Model):
+    
+    _name = 'caja_chica.entrada'
+
+    usuario= fields.Char()
+    monto= fields.Integer()
+    descripcion= fields.Char()
+    fecha= fields.Datetime()
+        
+
+
+
